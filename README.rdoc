@@ -1,5 +1,5 @@
 == NoteMe :collision:
-{Демо} [https://noteme-railsapi-angular.herokuapp.com/]
+{Демо}[https://noteme-railsapi-angular.herokuapp.com/]
 
 Тестовое приложение Rails JSON API с поддержкой CORS.
 
