@@ -1,28 +1,16 @@
-== README
+== NoteMe :collision:
+==== [Демо] (https://noteme-railsapi-angular.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Тестовое приложение Rails JSON API с поддержкой CORS.
 
-Things you may want to cover:
+* Index/Create: */api/v1/notes
+* Show/Delete/Update: */api/v1/notes/:id
 
-* Ruby version
+Поддержка CORS:
+* gem 'rack-cors'
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Клиент на Angular
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
