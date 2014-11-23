@@ -1,0 +1,26 @@
+%div.pure-g(ng-cloak ng-controller="NotesController")
+  .pure-u-1-5
+    #note-list-container.pure-menu.pure-menu-open
+      %ul
+        
+        %form.pure-form
+          %input.pure-input-1(type="text" ng-model="search.title" class="" placeholder="Search" style="font-size:18px")
+        %li(ng-repeat="note in notes | filter:search" ng-click="showNote(note, $index)" ng-class="{active: $index == selectedRow}")
+          %h3() 
+            {{note.title}}
+            %br
+            %small {{note.published_at | date:"MM/dd/yyyy 'at' h:mma"}}
+
+  #note-view-container.pure-u-19-24(ng-show="selectedNote")
+    .note-view
+      %h1 {{selectedNote.title}}
+      %p.note-body {{selectedNote.body}}
+      %p.note-published
+        Published at: {{selectedNote.published_at | date: medium}}
+      //%p.note-archived archived? - {{selectedNote.archived}}
+      .ui.pure-menu.pure-menu-open.pure-menu-horizontal
+        
+        %li=link_to 'Update', '#'
+        %li=link_to 'Delete', '#'
+      
+      
